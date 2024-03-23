@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+body {
+
+}
+
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 160vh;
+  background: rgba(0,0,0,0.4);
+}
+
+.m1{
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  margin-left: 250px;
+  margin-top: 100px;
+}
+.m2{
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  margin-left: 250px;
+  margin-top: 600px;
+  padding-bottom: 150px;
+}
+.box {
+  position: relative;
+  width: 700px;
+  height: 300px;
+  box-shadow: 0 30px 30px rgba(37, 37, 37, 0.5);
+}
+
+.box .imgBx {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.box .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s;
+}
+
+.box:hover .imgBx img {
+  opacity: 0;
+}
+
+.box .content {
+  position: absolute;
+  bottom: 20px;
+  left: 10%;
+  width: 80%;
+  height: 60px;
+  background: rgba(0,255,255,0.2);
+  transition: 0.5s;
+  overflow: hidden;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.box:hover .content {
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+}
+
+.box .content h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.box .content p {
+  margin: 10px 0 0;
+  padding: 10px;
+  opacity: 0;
+  line-height: 1.2em;
+  transition: 0.5s;
+  text-align: justify;
+  font-size: 0.85em;
+}
+
+.box:hover .content p {
+  opacity: 1;
+  transition-delay: 0.5s;
+}

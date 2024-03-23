@@ -1,0 +1,30 @@
+i.fas.fa-shopping-cart {
+  font-size: 50px;
+  color: #333;
+  background-color: white;
+  padding: 15px;
+  border-radius: 50%;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.cartIcon .quantity {
+  background-color: rgb(49, 49, 146);
+  font-size: 25px;
+  padding: 10px 15px;
+  font-weight: bold;
+  border-radius: 50%;
+  position: relative;
+  right: 36px;
+  bottom: 46px;
+  color: white;
+}
+
+.cartIcon {
+  position: fixed;
+  z-index: 5;
+  top: 85vh;
+  left: 90vw;
+}
+
+/* Rest of the cart */

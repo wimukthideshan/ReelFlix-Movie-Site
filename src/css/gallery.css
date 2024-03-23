@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    padding-top: 99px; 
+    overflow-x: hidden;
+}
+
+main {
+    /* change later */
+    background-color: #110101;
+    width: 100vw;
+}
+
+main h1{
+    text-align: center;
+    color: wheat;
+    background-color: #575656;
+    font-size: 50px;
+    padding: 20px;  
+}
+
+.movies {
+    padding-top: 100px;
+    width: 80vw;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.movies img {
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+    transition: all 0.5s;
+}
+
+.movies .imgTagRight {
+    position: relative;
+    bottom: 350px;
+    padding: 20px 30px;
+    font-size: 30px;
+    color: aqua;
+    text-align: center;
+    opacity: 0;
+    transition: all 0.5s;
+}
+ 
+.product:hover .imgTagRight {
+  opacity: 1;
+} 
+
+.product:hover img {
+    filter: blur(3px);
+}
+
+/* nav bar */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 97%;
+  z-index: 1;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  padding-right: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 200px;
+}
+
+.buttons {
+  width: 98vw;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  padding: 40px 20px;
+}
+
+.buttons button {
+  width: 100px;
+  height: 50px;
+  font-size: 25px;
+  font-weight: 500;
+  color: #110101;
+}
+
+.buttons button:hover {
+  background-color: #4caf50;
+
+}
+
+
+/* styling the nav elements */
+.gallery ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.gallery ul li {
+  display: flex;
+  align-items: flex-end;
+}
+
+.gallery ul li a {
+  position: relative;
+  text-decoration: none;
+  color: #f9f9f9;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.gallery ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 5px;
+  background-color: #fff;
+  transition: width 0.3s;
+}
+
+.gallery ul li a:hover:not(.active):after {
+  width: 100%;
+}
+
+.gallery ul li a.active {
+  font-size: 30px;
+  border: 2px solid #f9f9f9;
+  padding: 2px 5px;
+}
+
+.rest ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.rest ul li a {
+  font-size: 20px;
+  text-decoration: none;
+  color: #f9f9f9;
+  transition: all 0.3s ease;
+  padding: 5px;
+  text-align: center;
+}
+
+.rest ul li a:hover {
+  position: relative;
+  font-size: 25px;
+  color: #f0f0f0;
+  background-color: #4caf50;
+}

@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Norican&display=swap");
+
+/*  Styling the main page */
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  margin-top: 98px;
+  overflow-x: hidden;
+}
+
+span {
+  font-family: "Norican", cursive;
+}
+
+main {
+  height: 80.4vh;
+  background-color: black;
+  overflow-x: hidden;
+}
+
+.students {
+  width: 100%;
+  height: 100%;
+  gap: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.student {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: white;
+  transition: all 0.5s;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.student img {
+  width: 85%;
+  height: 85%;
+  border-radius: 100%;
+  object-fit: cover;
+  position: relative;
+  top: 0;
+  transition: all 0.5s;
+}
+
+/* change later */
+.student:hover {
+  width: 300px;
+  height: 350px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.student:hover img {
+  width: 150px;
+  height: 175px;
+  border-radius: 20px;
+  border: #333 solid 5px;
+  position: relative;
+  top: -150px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.hidden {
+  display: none;
+}
+
+.student:hover .hidden {
+  display: block;
+}
+
+.title {
+  font-size: 25px;
+  font-weight: bold;
+  position: relative;
+  top: -150px;
+  left: 38px;
+}
+
+.rester {
+  position: relative;
+  font-size: 20px;
+  top: -100px;
+}

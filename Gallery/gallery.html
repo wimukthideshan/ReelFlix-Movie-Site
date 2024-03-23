@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery</title>
+    <link rel="stylesheet" href="../src/css/gallery.css" />
+  </head>
+  <body>
+    <!-- nav bar -->
+     <header>
+      <div class="header">
+        <a href="../home.html">
+          <img src="../src/images/logo.png" alt="" class="logo" />
+        </a>
+        <div class="gallery">
+          <ul>
+            <li><a href="../Shop/movie.html" class="">Movies</a></li>
+            <li><a href="../Shop/tv.html" class="">Tv Show</a></li>
+            <li><a href="../Shop/anime.html" class="">Anime</a></li>
+            <li><a href="../Shop/cartoon.html" class="">Cartoon</a></li>
+            <li><a href="../Shop/cart.html" class="">Cart</a></li>
+          </ul>
+        </div>
+
+        <div class="rest">
+          <ul>
+            <li><a href="../Gallery/gallery.html">Gallery</a></li>
+            <li><a href="../Comment/coursework.html">Comment</a></li>
+            <li><a href="../Quiz/Quiz.html">Quiz</a></li>
+            <li><a href="../SiteMap/SiteMap.html">Site Map</a></li>
+            <li><a href="../About us/aboutUs.html">About Us</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <main>
+      <h1>Top Rated Movies</h1>
+      <div class="movies"></div>
+      <div class="buttons">
+        <div class="part1">
+          <button id="greyBtn" onclick="grey()">Grey</button>
+          <button id="whiteBtn" onclick="white()">White</button>
+          <button id="greenBtn" onclick="green()">Green</button>
+          <button id="redBtn" onclick="red()">Red</button>
+        </div>
+
+        <div class="part2">
+          <!--Font size changing buttons-->
+          <button id="smallFont" style="font-size: 12px" onclick="small()">A</button>
+          <button id="medFont" style="font-size: 16px" onclick="medium()">A</button>
+          <button id="largeFont" style="font-size: 19px" onclick="large()">A</button>
+        </div>
+      </div>
+    </main>
+    
+    <!--Footer-->>
+    <footer>
+      <div class="intro">
+        <p>Designed By:- Deshan Dassanayake</p>
+        <p>All Rights Reserved.</p>
+      </div>
+      <div class="editor">
+        <a href="../About us/deshan.html">
+          <span> Page Editor </span>
+        </a>
+      </div>
+    </footer>
+    <script src="../src/js/gallery.js"></script>
+  </body>
+</html>

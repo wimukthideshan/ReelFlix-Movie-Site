@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout Form</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #000000;
+        background-image: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+          ),
+          url(DetailForm.jpg);
+        padding: 20px;
+      }
+
+      .container {
+        max-width: 450px;
+        margin: 0 auto;
+        background-color: #ffffff;
+        padding: 45px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .form-group {
+        margin-bottom: 15px;
+      }
+
+      label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      input[type="submit"] {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Checkout</h2>
+      <form >
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+
+        <div class="form-group">
+          <label for="address">Address:</label>
+          <input type="text" id="address" name="address" required />
+        </div>
+
+        <div class="form-group">
+          <label for="city">City:</label>
+          <input type="text" id="city" name="city" required />
+        </div>
+
+        <div class="form-group">
+          <label for="zip">ZIP Code:</label>
+          <input type="text" id="zip" name="zip" required />
+        </div>
+
+        <div class="form-group">
+          <label for="country">Country:</label>
+          <select id="country" name="country" required>
+            <option>Select a country</option>
+            <!-- Add country options here -->
+            <option value="US">United States</option>
+            <option value="CA">Canada</option>
+            <option value="LK">Sri Lanka</option>
+            <option value="IN">India</option>
+            <option value="UK">United Kingdom</option>
+            <!-- Add more countries as needed -->
+          </select>
+        </div>
+
+        <input type="submit" value="Place Order" />
+      </form>
+
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const form = document.querySelector("form");
+          const submitButton = document.querySelector('input[type="submit"]');
+
+          // Function to show the "Thank you" alert
+          function showThankYouAlert() {
+            alert("Thank you for your order!");
+          }
+
+          // Adding a submit event listener to the form
+          form.addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent form submission (so the alert doesn't disappear quickly)
+            setTimeout(function () {
+              form.submit(); // Submit the form after a short delay (if needed)
+            }, 1000); // Adjust the delay (in milliseconds) as needed
+          });
+          
+          // Adding a click event listener to the submit button (optional)
+          submitButton.addEventListener("click", function (event) {
+            showThankYouAlert(); // Show the "Thank you" alert
+            event.preventDefault(); // Prevent default button click behavior
+            form.submit(); // Trigger the form submission programmatically
+            window.location.href = '../home.html';
+          });
+        });
+      </script>
+    </div>
+  </body>
+</html>

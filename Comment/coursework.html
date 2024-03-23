@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CW Comment Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>How we did!</h1>
+    <form id="myForm">
+      <div class="satisfied input_field">
+        <label for="satisfaction"
+          >How satisfied are you with our website?</label
+        >
+        <div>
+          <input
+            type="radio"
+            id="extremely-satisfied"
+            name="satisfaction"
+            value="extremely-satisfied"
+          />
+          <label class="satis" for="extremely-satisfied"
+            >Extremely Satisfied</label
+          >
+        </div>
+        <div>
+          <input
+            type="radio"
+            id="very-satisfied"
+            name="satisfaction"
+            value="very-satisfied"
+          />
+          <label class="satis" for="very-satisfied">Very Satisfied</label>
+        </div>
+        <div>
+          <input
+            type="radio"
+            id="moderately-satisfied"
+            name="satisfaction"
+            value="moderately-satisfied"
+          />
+          <label class="satis" for="moderately-satisfied"
+            >Moderately Satisfied</label
+          >
+        </div>
+        <div>
+          <input
+            type="radio"
+            id="not-so-satisfied"
+            name="satisfaction"
+            value="not-so-satisfied"
+          />
+          <label class="satis" for="not-so-satisfied">Not so Satisfied</label>
+        </div>
+        <div>
+          <input
+            type="radio"
+            id="not-at-all-satisfied"
+            name="satisfaction"
+            value="not-at-all-satisfied"
+          />
+          <label class="satis" for="not-at-all-satisfied"
+            >Not at all Satisfied</label
+          >
+        </div>
+      </div>
+      <div id="error1" class="error"></div>
+      <div class="reasoning input_field">
+        <label for="reasons input_field"
+          >Please could you tell us your reasons for giving this rating?</label
+        >
+        <textarea id="reasons" name="reasons" rows="5"></textarea>
+      </div>
+      <div id="error3" class="error"></div>
+      <div class="link input_field">
+        <label for="links"
+          >Were you able to access the links on the website?</label
+        >
+        <div class="radio-group">
+          <input type="radio" id="yes" name="links" value="yes" />
+          <label for="yes" class="yes-no">Yes</label>
+          <input type="radio" id="no" name="links" value="no" />
+          <label for="no" class="yes-no">No</label>
+        </div>
+      </div>
+      <div id="error2" class="error"></div>
+      <div class="tasks input_field">
+        <label for="task">How did you want to complete this task today?</label>
+        <select id="task" name="task">
+          <option value="" selected disabled>Please Select</option>
+          <option value="Through phone">Phone</option>
+          <option value="Through website">Website</option>
+          <option value="webchat">Webchat</option>
+        </select>
+      </div>
+      <div id="error4" class="error"></div>
+      <div class="tasks input_field">
+        <label for="task">If you had to complete this task again, how would you prefer to do it?</label>
+        <select id="task" name="task">
+          <option value="" selected disabled>Please Select</option>
+          <option value="Through phone">Phone</option>
+          <option value="Through website">Website</option>
+          <option value="webchat">Webchat</option>
+        </select>
+      </div>
+      <div id="error4" class="error"></div>
+      <input type="submit" id="Submit" value="Submit" />
+    </form>
+    <script type="text/javascript" src="script.js">
+    </script>
+  </body>
+</html>

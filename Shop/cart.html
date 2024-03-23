@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart</title>
+    <link rel="stylesheet" href="../src/css/cartTab.css" />
+    <link rel="stylesheet" href="../src/css/navbar.css" />
+    <link rel="stylesheet" href="../src/css/footer.css">
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <a href="../home.html">
+          <img src="../src/images/logo.png" alt="" class="logo" />
+        </a>
+        <div class="gallery">
+          <ul>
+            <li><a href="../Shop/movie.html" class="">Movies</a></li>
+            <li><a href="../Shop/tv.html" class="">Tv Show</a></li>
+            <li><a href="../Shop/anime.html" class="">Anime</a></li>
+            <li><a href="../Shop/cartoon.html" class="">Cartoon</a></li>
+            <li><a href="../Shop/cart.html" class="">Cart</a></li>
+          </ul>
+        </div>
+
+        <div class="rest">
+          <ul>
+            <li><a href="../Gallery/gallery.html">Gallery</a></li>
+            <li><a href="../Comment/coursework.html">Comment</a></li>
+            <li><a href="../Quiz/Quiz.html">Quiz</a></li>
+            <li><a href="../SiteMap/SiteMap.html">Site Map</a></li>
+            <li><a href="../About us/aboutUs.html">About Us</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <div class="main">
+      <div class="top">
+        <h1>Shopping Cart</h1>
+        <div class="checkout">
+          <p class="Totalprice"></p>
+          <button class="checkoutbtn" onclick="clearCart()" style="display: none;">Buy</button>
+        </div>
+      </div>
+      <div class="cart">
+        <!-- here goes all the cart items -->
+      </div>
+    </div>
+
+    <!--Footer-->>
+    <footer>
+      <div class="intro">
+        <p>Designed By:- Dineth Pabasara</p>
+        <p>All Rights Reserved.</p>
+      </div>
+      <div class="editor">
+        <a href="../About us/dineth.html">
+          <span> Page Editor </span>
+        </a>
+      </div>
+    </footer>
+
+    <script>
+      // Function to fetch cart data from local storage
+      function getCartFromLocalStorage() {
+        const cartData = localStorage.getItem("cart");
+        return cartData ? JSON.parse(cartData) : [];
+      }
+
+      // Function to save the cart data to local storage
+      function saveCartToLocalStorage(cartData) {
+        localStorage.setItem("cart", JSON.stringify(cartData));
+      }
+
+      // Function to display cart items on the cart page
+      function displayCartItems(cartData) {
+        let totalamout = 0;
+        const cartContainer = document.querySelector(".cart");
+
+        if (cartData.length === 0) {
+          cartContainer.innerHTML = "<p>Your cart is empty.</p>";
+        } else {
+          cartContainer.innerHTML = ""; // Clear previous content
+
+          cartData.forEach((item, index) => {
+            const cartItemContainer = document.createElement("div");
+            cartItemContainer.classList.add("cart-item");
+
+            const total = item.price * item.quantity;
+            totalamout += total; 
+
+            cartItemContainer.innerHTML = `
+          <img src="${item.image}" alt="${item.title}" class="image" />
+          <div class="cartDetail">
+            <div class="item-details">
+              <h2 class="title">${item.title}</h2>
+              <p class="price">Per item: $${item.price.toFixed(2)}</p>
+              <p class="quantity">Quantity: ${item.quantity}</p>
+            </div>
+            <div class="cartOptions">
+              <p class="totalPrice">$${total.toFixed(2)}</p>
+              <button class="delete" onclick="deleteCartItem(event)" data-index="${index}">X</button>
+            </div>
+          </div>
+        `;
+
+        const totalChange = document.querySelector(".Totalprice").innerHTML = `Total: $${totalamout}`;
+        const buttontobuy = document.querySelector(".checkoutbtn").style.display="block";
+
+            cartContainer.appendChild(cartItemContainer);
+          });
+        }
+      }
+
+      // Fetch cart data from local storage and display cart items
+      const cartData = getCartFromLocalStorage();
+      displayCartItems(cartData);
+
+      function deleteCartItem(event) {
+        const button = event.target;
+        const index = button.getAttribute("data-index");
+
+        // Fetch the existing cart data from local storage
+        const cartData = getCartFromLocalStorage();
+
+        // Remove the item from the cart data based on the index
+        cartData.splice(index, 1);
+
+        // Save the updated cart data to local storage
+        saveCartToLocalStorage(cartData);
+
+        // Display the updated cart items
+        displayCartItems(cartData);
+      }
+
+      // Function to remove all items from the cart and prompt a confirmation alert
+      function clearCart() {
+        const cartData = getCartFromLocalStorage();
+
+        if (cartData.length === 0) {
+          alert("Your cart is already empty.");
+          return;
+        }
+
+        const confirmDelete = confirm("Are you sure you want to Buy all items from your cart?");
+        if (confirmDelete) {
+          localStorage.removeItem("cart");
+          displayCartItems([]); // Display an empty cart
+           const totalChange = document.querySelector(".Totalprice").innerHTML = `Total: $0`;
+            window.location.href = '../BuyerDetailsForm/BuyerDetails.html';
+        }
+      }
+    </script>
+  </body>
+</html>

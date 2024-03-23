@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Norican&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Inter", sans-serif; /* Add a font here */
+  background-color: #000000;
+}
+
+span {
+  font-family: "Norican", cursive;
+}
+
+.title {
+  padding: 10px 0;
+  background-color: #000000;
+}
+
+.title h1 {
+  text-align: center;
+  font-size: 65px;
+  font-weight: bolder;
+  color: rgb(72, 234, 234);
+}
+
+/* Designing a card */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 50px 150px;
+  gap: 50px;
+}
+
+.card {
+  background-color: #87ceeb;
+  width: 500px;
+  height: 250px;
+  border-radius: 15px;
+  padding: 20px 10px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.card p {
+  text-align: center;
+}
+
+.card .btn {
+  background-color: #181c58;
+  padding: 10px 30px;
+  border-radius: 60px;
+  color: #87ceeb;
+  transition: all 0.3s;
+}
+
+.cards .btn:hover {
+  transform: scale(1.2);
+}
+
+
+.information {
+    background-color: #87ceeb;
+    width: 800px;
+    text-align: center;
+    margin: auto;
+    margin-top: 40px;
+    padding: 20px 50px;
+    border-radius: 10px;
+    border: 5px solid #181c58;
+}

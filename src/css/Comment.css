@@ -1,0 +1,140 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #000000;
+  background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(Commnetsback3.jpg);
+  background-size: cover;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 36px;
+  color: #ecf0f1;
+}
+
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* for every input field */
+.input_field {
+  margin-left: 20px;
+  margin-bottom: 20px;
+  padding: 15px;
+  padding-bottom: 20px;
+  border-radius: 10px;
+  background-color: #181a1d96;
+  background-size: relative;
+
+}
+
+/* all teh labels*/
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+/* all the radio input buttons */
+input[type="radio"] {
+  display: none;
+}
+
+/* first input form starts here*/
+label.satis {
+  display: inline-block;
+  margin-left: 10px;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #000000;
+  background-color: #ffffff;
+  border-radius: 25px;
+  transition: all 0.3s ease-in-out;
+}
+
+input[type="radio"]:checked + label.satis {
+  background-color: #4d5663;
+}
+/* Ends here */
+
+/* second part of the page */
+textarea {
+  display: block;
+  width: 90%;
+  margin-left: 10px;
+  padding: 10px;
+  border: none;
+  background-color: #f5f6fa;
+  color: #000000;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  border-radius: 10px;
+}
+
+textarea:focus {
+  outline: none;
+  box-shadow: 0px 0px 10px rgba(44, 62, 80, 0.5) inset;
+}
+/* Ends here */
+
+/* third part of the page */
+.radio-group {
+  margin-left: 10px;
+}
+
+label.yes-no {
+  width: fit-content;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #000000;
+  background-color: rgb(255, 255, 255);
+  border-radius: 25px;
+  transition: all 0.3s ease-in-out;
+}
+
+input[type="radio"]:checked + label.yes-no {
+  background-color: #4d5663;
+}
+/* Ends here*/
+
+/* Fourth field starts here */
+select {
+  margin-left: 10px;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #f5f6fa;
+  width: 100%;
+  max-width: 300px;
+}
+/* Ends here*/
+
+/* Submit button*/
+input[type="submit"] {
+  display: block;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 20px;
+  background-color: #349da9;
+  color: #ecf0f1;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+input[type="submit"]:hover {
+  background-color: #1abc9c;
+  font-size: 20px;
+}
+/* end of submit button */
