@@ -1,2 +1,2 @@
-# Movie Site
- A movie site purchasing site
+# Movie Website
+ A movie site purchasing website named ReelFlix
